@@ -24,7 +24,6 @@ export const createPost = (post) => async(dispatch) => {
 
 export const updatePost = (id, post) => async(dispatch) => {
     try {
-        console.log('inside update post try')
         const { data } = await api.updatePost(id, post)
 
         dispatch({type:'UPDATE_POST', payload: data })
